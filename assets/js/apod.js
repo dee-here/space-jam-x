@@ -13,3 +13,8 @@ fetch(exampleURL + apiKey)
           throw new Error("NETWORK RESPONSE ERROR");
         }
       })
+      .then(data => {
+        console.log(data);
+        displayApod()
+      })
+      .catch(error => console.log('ERROR'));
