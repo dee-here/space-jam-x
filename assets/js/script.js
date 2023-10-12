@@ -6,7 +6,9 @@ var exampleURL = 'https://api.nasa.gov/planetary/apod';
 
 	var apiKey ='fPmJ1tNwKaVRT5hG2jPsxrx3q4gF6OSRrzAtx0s8'; 
     
-	
+	fetch(exampleURL + apiKey)
+      .then(data => data.json())
+      .then(data => console.log(data))
     
     
     
