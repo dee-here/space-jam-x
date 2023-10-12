@@ -23,35 +23,36 @@
 
     <nav>
         <div class="nav-wrapper black">
+            <div class="container">
             <a href="#" class="brand-logo 
-                left">SPACE JAM X
+                left">SPACE JAM X </a>
+                
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="left material-icons">menu</i>
             </a>
 
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href=#pic-of-day>
-                        IMAGE OF THE DAY
-                    </a>
-                </li>
-
-                <li>
-                    <a href=#space-events>
-                        SPACE FORECAST
-                    </a>
-                </li>
-
-                <li><a href=#nasa-search>
-                        CALENDER IMAGE
-                    </a>
-                </li>
+            <ul class="right hide-on-med-and-down">
+                <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
+                <li><a href=#space-events>SPACE FORECAST</a></li>
+                <li><a href=#nasa-search>CALENDER IMAGE</a></li>
             </ul>
         </div>
     </nav>
 
+    <section class="space-calendar">
 
-    
+        <input type="text" class="datepicker">
 
-    <!-- <header>Space Jam X</header> -->
+
+    </section>
+
+    <!-- <ul id="slide-out" class="mobile-links">
+        <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
+        <li><a href=#space-events>SPACE FORECAST</a></li>
+        <li><a href=#nasa-search>CALENDER IMAGE</a></li>
+    </ul> -->
+    <!-- <ul class="collapsible collapsible-accordion"> -->
+<!-- <header>Space Jam X</header> -->
     <main>
         <section class="pic-of-day">Pic of the day</section>
         <section class="space-events">Space events</section>
@@ -59,5 +60,10 @@
     </main>
     <footer>Footer</footer>
     <script src="./assets/js/script.js"></script>
+    <script>
+        $(document).ready(function(){
+$('.sidenav').sidenav();
+})
+    </script>
 </body>
 </html>
