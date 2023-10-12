@@ -21,3 +21,27 @@ header, footer {
     width: 500px;
 }
 /* Ian changes */
+
+/* dee changes **/
+.events-container {
+    display: flex;
+    gap: 15px;
+
+}
+.asteroid-data {
+    /* flex: 1; */
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #15124a;
+    margin: 25px 0;
+    padding: 15px;
+    /* background-image: linear-gradient(to right, #15124a , #230148);
+    box-shadow: 5px 5px 15px #fff; */
+}
+
+.asteroid-data:hover {
+    box-shadow: 5px 5px 10px #fff;
+}
+
+/** dee changes /
