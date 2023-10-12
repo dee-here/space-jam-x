@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,26 +20,25 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
 
+<body>
     <nav>
         <div class="nav-wrapper black">
             <div class="container">
-            <a href="#" class="brand-logo 
+                <a href="#" class="brand-logo 
                 left">SPACE JAM X </a>
-                
-            <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                <i class="left material-icons">menu</i>
-            </a>
 
-            <ul class="right hide-on-med-and-down">
-                <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
-                <li><a href=#space-events>SPACE FORECAST</a></li>
-                <li><a href=#nasa-search>CALENDER IMAGE</a></li>
-            </ul>
-        </div>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="left material-icons">menu</i>
+                </a>
+
+                <ul class="right hide-on-med-and-down">
+                    <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
+                    <li><a href=#space-events>SPACE FORECAST</a></li>
+                    <li><a href=#nasa-search>CALENDER IMAGE</a></li>
+                </ul>
+            </div>
     </nav>
-
     <section class="space-calendar">
 
         <input type="text" class="datepicker">
@@ -52,13 +52,23 @@
         <li><a href=#nasa-search>CALENDER IMAGE</a></li>
     </ul> -->
     <!-- <ul class="collapsible collapsible-accordion"> -->
-<!-- <header>Space Jam X</header> -->
+    <!-- <header>Space Jam X</header> -->
     <main>
-        <section class="pic-of-day">Pic of the day</section>
+        <section class="pic-of-day">Pic of the day
+            <div id="displayImg">
+                <img id="apodImg"></img>
+            </div>
+            <div id="displayDisc">
+                <p id="apodDisc"></p>
+            </div>
+
+        </section>
         <section class="space-events">Space events</section>
         <section class="nasa-search">NASA search</section>
     </main>
     <footer>Footer</footer>
     <script src="./assets/js/script.js"></script>
-    </body>
+    <script src="./assets/js/apod.js"></script>
+</body>
+
 </html>
