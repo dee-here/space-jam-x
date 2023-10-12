@@ -15,6 +15,10 @@ header, footer {
     text-align: center;
 }
 
+.topnav1 {
+    background-color: gray;
+}
+
 .topnav {
     overflow:hidden;
     background-color: gray;
@@ -25,9 +29,14 @@ header, footer {
     color: black;
 }
 
-
-
-
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
 
 .button {
     border: none;
