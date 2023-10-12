@@ -15,15 +15,18 @@ fetch(exampleURL + apiKey)
       })
       .then(data => {
         console.log(data);
-        // displayApod(data)
+         displayApod(data)
       })
       .catch(error => console.log('ERROR'));
 
       
 function displayApod(data){
-    //   const apodImg =data.hdurl
-
-
-      }
+       var apodData = data;
+       var apodImg = document.getElementById('apodImg');
+       apodImg.src = apodData.hdurl;
+       
+       document.getElementById('displayImg').appendChild(apodImg);
+       
+}
    
       
