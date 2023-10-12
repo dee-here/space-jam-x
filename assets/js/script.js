@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Datepicker.init(elems, options);
 });
 
+{/* <script>
+        $(document).ready(function(){
+$('.sidenav').sidenav();
+})
+    </script>
+</body> */}
+
 
 
 
