@@ -32,6 +32,8 @@ function displayApod(data){
        apodDate.innerText = apodData.explanation
        document.getElementById('displayDisc').appendChild(apodDate)
     // discription for picture of the day
+       
+
 }
    
       
