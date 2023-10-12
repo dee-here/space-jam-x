@@ -18,3 +18,12 @@ fetch(exampleURL + apiKey)
         displayApod()
       })
       .catch(error => console.log('ERROR'));
+
+      
+function displayApod(data){
+      
+
+
+      }
+   
+      
