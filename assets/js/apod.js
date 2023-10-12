@@ -27,10 +27,11 @@ function displayApod(data){
        apodImg.src = apodData.hdurl;
        document.getElementById('displayImg').appendChild(apodImg);
     // picture of the day image   
-       
+    // discription for picture of the day   
        var apodDate = document.getElementById('apodDisc')
        apodDate.innerText = apodData.explanation
        document.getElementById('displayDisc').appendChild(apodDate)
+    // discription for picture of the day
 }
    
       
