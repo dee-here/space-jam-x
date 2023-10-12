@@ -9,23 +9,10 @@ var exampleURL = 'https://api.nasa.gov/planetary/apod?api_key=';
 	fetch(exampleURL + apiKey)
       .then(data => data.json())
       .then(data => console.log(data))
+      .catch(error => console.log('ERROR'));
     
     
-    
-    // var request = fetch(); 
-	// request.open('GET', exampleURL + '?api_key=' + apiKey, true);
-
-	// request.addEventListener('load',function(){
-
-	// if(request.status >= 200 && request.status < 400){
-    // var response = JSON.parse(request.responseText);
-	// console.log(response);
-	// } 
-	// else {
-	// console.log("Error in network request: " + request.statusText);
-	// }});
-	// request.send(null);
-					
+   
 
 
 
