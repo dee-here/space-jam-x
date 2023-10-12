@@ -1,0 +1,15 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+section {
+    border: 1px solid #fff;
+    padding: 25px;
+}
+
+header, footer {
+    padding: 25px;
+    font-size: 20px;
+    text-align: center;
+}
