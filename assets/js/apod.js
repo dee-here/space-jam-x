@@ -21,12 +21,12 @@ fetch(exampleURL + apiKey)
 
       
 function displayApod(data){
+    // picture of the day image
        var apodData = data;
        var apodImg = document.getElementById('apodImg');
        apodImg.src = apodData.hdurl;
-       
        document.getElementById('displayImg').appendChild(apodImg);
-       
+    // picture of the day image   
 }
    
       
