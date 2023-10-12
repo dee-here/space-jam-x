@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $('.sidenav').sidenav();
 })
     </script>
-</body> */}
+*/}
 
 
 
