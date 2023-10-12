@@ -17,13 +17,13 @@ var exampleURL = 'https://api.nasa.gov/planetary/apod?api_key=';
       })
       .then(data => {
         console.log(data);
-        console.log()
+        displayApod()
       })
       .catch(error => console.log('ERROR'));
     
     
-   function displayApod(){
-   
+   function displayApod(data){
+      
 
 
    }
