@@ -37,12 +37,11 @@ function displayApod(data){
        apodTitle.innerText = apodData.title
        document.getElementById('displayImg').appendChild(apodTitle)
     // added title for picture of the day
-      
+    // added Date for picture of the day
       var apodDate = document.getElementById('apodDate');
       apodDate.innerText = apodData.date
       document.getElementById('displayImg').appendChild(apodDate)
-
-
+   // added Date for picture of the day
 }
    
       
