@@ -20,17 +20,6 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<style>
-/* body {
-
-    background-image: ('assets/css/stars_glare_black_204142_3840x2400.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-}
-
-</style> */
 
 <body>
     <nav>
@@ -40,7 +29,7 @@
                 left">SPACE JAM X </a>
 
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                    <i class="left material-icons" class="hide-on-large-only">menu</i>
+                    <!-- <i class="left material-icons" class="hide-on-large-only">menu</i> -->
                 </a>
 
                 <ul class="right hide-on-med-and-down">
@@ -52,7 +41,7 @@
     </nav>
     <section class="space-calendar">
 
-        <input type="text" class="datepicker">
+        <!-- <input type="text" class="datepicker"> -->
 
 
     </section>
@@ -66,16 +55,22 @@
     <!-- <header>Space Jam X</header> -->
     <main class="container">
         <section id="pic-of-day">
+
             <div class="row">
-                <div class="col s2 m5 l8 offset-m3 center-align" id="displayImg">
+                <div class="col s2 m5 l8" id="displayImg">
                     <img id="apodImg" img class="responsive-img"></img>
                 </div>
+
                 <div id="displayDisc" class="col s4 m4 l4">
                     <h2>IMAGE OF THE DAY</h2>
-                    <p id="apodDisc"> </p>
+                    <h3 id="apodDate"></h3>
+                    <h3 id="apodTitle"></h3>
+                    <p id="apodDisc"></p>
                 </div>
+
             </div>
         </section>
+
         <section id="space-events">
             <div class="events-container" class="card-panel">
                 <div class="asteroid-data">Asteroid 1</div>

@@ -27,13 +27,21 @@ function displayApod(data){
        apodImg.src = apodData.hdurl;
        document.getElementById('displayImg').appendChild(apodImg);
     // picture of the day image   
-    // discription for picture of the day   
-       var apodDate = document.getElementById('apodDisc')
-       apodDate.innerText = apodData.explanation
-       document.getElementById('displayDisc').appendChild(apodDate)
-    // discription for picture of the day
-       
-
+     // added title for picture of the day 
+       var apodTitle =document.getElementById('apodTitle')
+       apodTitle.innerText = 'Title: '+ apodData.title
+       document.getElementById('displayDisc').appendChild(apodTitle)
+    // added title for picture of the day
+    // added Date for picture of the day
+      var apodDate = document.getElementById('apodDate');
+      apodDate.innerText ='date: ' + apodData.date
+      document.getElementById('displayDisc').appendChild(apodDate)
+   // added Date for picture of the day
+   // added Discription for picture of the day 
+       var apodDisc = document.getElementById('apodDisc')
+       apodDisc.innerText = apodData.explanation
+       document.getElementById('displayDisc').appendChild(apodDisc)
+   // added Discription for picture of the day
 }
    
-      
+    
