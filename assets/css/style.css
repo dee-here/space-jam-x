@@ -1,25 +1,36 @@
 body {
-    background-color: #000;
     color: #fff;
     font-size: 16px;
+    background-image: url("./stars_glare_black_204142_3840x2400.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+
 }
+
+
+
 section {
     border: 1px solid #fff;
     padding: 25px;
     margin: 50px 0;
 }
 
-header, footer {
+header,
+footer {
     padding: 25px;
     font-size: 20px;
     text-align: center;
 }
 
 /* Ian changes */
-#apodImg{
-    height: 800px;
+#apodImg {
+    height: 100%;
     width: 100%;
 }
+
 /* Ian changes */
 
 
@@ -30,6 +41,7 @@ header, footer {
     gap: 15px;
 
 }
+
 .asteroid-data {
     /* flex: 1; */
     border-radius: 5px;
