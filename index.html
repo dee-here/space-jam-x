@@ -19,6 +19,8 @@
     <title>Space Jam X</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body>
@@ -74,6 +76,8 @@
         <section id="space-events">
             <div class="title-filter-container">
                 <h3 class="title">Near earth Objects</h3>
+                <input type="text" id="event-date-picker" placeholder="Select a Date">
+                <a onclick="getSpaceEvents(event)" class="btn waves-effect waves-dark">Search Near Earth...</a>
             </div>
             <div class="events-container card-panel black" id ="events-container">
                 <div class="asteroid-data">Asteroid 1</div>
