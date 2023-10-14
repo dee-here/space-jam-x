@@ -57,4 +57,9 @@ header, footer {
 .title {
     font-size: 20px;
 }
+
+#event-date-picker {
+    border: 1px solid #fff;
+    color: #fff;
+}
 /** dee changes /
