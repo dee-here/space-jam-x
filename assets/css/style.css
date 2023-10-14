@@ -17,10 +17,12 @@ header, footer {
 
 /* Ian changes */
 #apodImg{
-    height: 500px;
-    width: 500px;
+    height: 800px;
+    width: 100%;
 }
 /* Ian changes */
+
+
 
 /* dee changes **/
 .events-container {
