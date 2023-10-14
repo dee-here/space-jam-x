@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Jam X</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <nav>
+        <div class="nav-wrapper black">
+            <div class="container" >
+                <a href="#" class="brand-logo 
+                left">SPACE JAM X </a>
 
-    <header>Space Jam X</header>
-    <body>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="left material-icons" class="hide-on-large-only">menu</i>
+                </a>
 
-        <head class="topnav">
-            <div>      
-                <input class="topnav1" type="text" placeholder="Search...">
+                <ul class="right hide-on-med-and-down">
+                    <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
+                    <li><a href=#space-events>SPACE FORECAST</a></li>
+                    <li><a href=#nasa-search>CALENDER IMAGE</a></li>
+                </ul>
             </div>
-        </head>
-        <head>
-            <p>
-                <button class="button button1">i</button>
-            </p>
-    
-        </head>
+    </nav>
+    <section class="space-calendar">
+
+        <input type="text" class="datepicker">
+
+
+    </section>
+
+    <!-- <ul id="slide-out" class="mobile-links">
+        <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
+        <li><a href=#space-events>SPACE FORECAST</a></li>
+        <li><a href=#nasa-search>CALENDER IMAGE</a></li>
+    </ul> -->
+    <!-- <ul class="collapsible collapsible-accordion"> -->
+    <!-- <header>Space Jam X</header> -->
     <main>
-        <section class="pic-of-day">Pic of the day</section>
-        <section class="space-events">Space events</section>
-        <section class="nasa-search">NASA search</section>
+     
+        <section id="pic-of-day">
+            <div class="row">
+                <div class="col s8 m8 l9" id="displayImg">
+                    <img id="apodImg" img class="responsive-img"></img>
+                  
+                </div>
+                <div id="displayDisc" class="col s4 m4 l3">
+                    <h2>IMAGE OF THE DAY</h2>
+                    <h3 id="apodDate"></h3>  
+                    <h3 id="apodTitle"></h3> 
+                    <p id="apodDisc"></p> 
+                    
+                    
+                </div>
+            </div>
+        </section>
+        <section id="space-events">
+            <div class="events-container" class="card-panel">
+                <div class="asteroid-data">Asteroid 1</div>
+                <div class="asteroid-data">Asteroid 2</div>
+            </div>
+        </section>
+        <section id="nasa-search">NASA search</section>
     </main>
     <footer>Footer</footer>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/apod.js"></script>
+    <script src="./assets/js/event-script.js"></script>
 </body>
+
 </html>

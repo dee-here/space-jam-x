@@ -15,6 +15,8 @@ header, footer {
     text-align: center;
 }
 
+
+/* christians css */
 .topnav1 {
     background-color: gray;
 }
@@ -52,4 +54,37 @@ header, footer {
 .button1 {
     background-color: gray;
 }
+/* christians css */
 
+/* Ian changes */
+#apodImg{
+    height: 800px;
+    width: 100%;
+}
+/* Ian changes */
+
+
+
+/* dee changes **/
+.events-container {
+    display: flex;
+    gap: 15px;
+
+}
+.asteroid-data {
+    /* flex: 1; */
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #15124a;
+    margin: 25px 0;
+    padding: 15px;
+    /* background-image: linear-gradient(to right, #15124a , #230148);
+    box-shadow: 5px 5px 15px #fff; */
+}
+
+.asteroid-data:hover {
+    box-shadow: 5px 5px 10px #fff;
+}
+
+/** dee changes /
