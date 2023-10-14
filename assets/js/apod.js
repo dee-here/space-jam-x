@@ -32,10 +32,14 @@ function displayApod(data){
        apodDate.innerText = apodData.explanation
        document.getElementById('displayDisc').appendChild(apodDate)
     // discription for picture of the day
+    // added title for picture of the day 
        var apodTitle =document.getElementById('apodTitle')
        apodTitle.innerText = apodData.title
        document.getElementById('displayImg').appendChild(apodTitle)
+    // added title for picture of the day
 
+
+    
 }
    
       
