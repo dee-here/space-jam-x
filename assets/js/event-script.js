@@ -1,5 +1,7 @@
 //handle to DOM elements
 var asteroidContainerEl = document.getElementById("events-container");
+var eventDatePickerEl = document.getElementById("event-date-picker");
+
 
 
 //class to store asteroid info
@@ -25,12 +27,15 @@ class neoApiObject {
 // var asteroidDataArray = [new asteroid("asteroid-1", "10-20-2013", "33333 MPH", "0.23 M", "0,5 M")];
 var asteroidDataArray;
 var neoObjectArray;
+var eventsDate;
+var eventRequestUrl = `https://api.nasa.gov/neo/rest/v1/feed?&api_key=${apiKey}`;
+var apiKey= 'I0E5i67UznchNDQxwPWdnGq0ONVG6sTXkV6F1SfP';
 
 function getSpaceEventsFromApi() {
 
-  var apiKey= 'I0E5i67UznchNDQxwPWdnGq0ONVG6sTXkV6F1SfP';
-  var eventRequestUrl =
-    `https://api.nasa.gov/neo/rest/v1/feed?&api_key=${apiKey}`;
+   if(eventsDate) {
+    eventRequestUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${eventsDate}&api_key=${apiKey}`;
+   }
 
   fetch(eventRequestUrl)
     .then(function (response) {
@@ -132,13 +137,40 @@ function getAsteroidData(data) {
 
 }
 
+function setDateForEventsApi() {
 
+}
+
+
+function getSpaceEvents(event) {
+  console.log(" events clicked with: ", event);
+  console.log("Search space events clicked @@", eventDatePickerEl.value);
+  if(eventDatePickerEl?.value ) {
+    eventsDate = eventDatePickerEl.value;
+    //call fetch api 
+    getSpaceEventsFromApi();
+  }
+}
+
+function displayDatePicker() {
+  flatpickr("#event-date-picker", {
+    defaultDate: 'today',
+    // dateFormat: 'Y-M-D',
+  });
+}
+
+// function initMaterialize() {
+//   M.AutoInit();
+// };
 
 function init() {
+  // initMaterialize()
   getSpaceEventsFromApi();
   //getAsteroidData();
   //should be called in getasteroiddata!!
   //displayAsteroids();
+  displayDatePicker()
 }
+
 
 init();
