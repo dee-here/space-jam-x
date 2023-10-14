@@ -28,18 +28,21 @@ function displayApod(data){
        document.getElementById('displayImg').appendChild(apodImg);
     // picture of the day image   
     // discription for picture of the day   
-       var apodDate = document.getElementById('apodDisc')
-       apodDate.innerText = apodData.explanation
-       document.getElementById('displayDisc').appendChild(apodDate)
+       var apodDisc = document.getElementById('apodDisc')
+       apodDisc.innerText = apodData.explanation
+       document.getElementById('displayDisc').appendChild(apodDisc)
     // discription for picture of the day
     // added title for picture of the day 
        var apodTitle =document.getElementById('apodTitle')
        apodTitle.innerText = apodData.title
        document.getElementById('displayImg').appendChild(apodTitle)
     // added title for picture of the day
+      
+      var apodDate = document.getElementById('apodDate');
+      apodDate.innerText = apodData.date
+      document.getElementById('displayImg').appendChild(apodDate)
 
 
-    
 }
    
       
