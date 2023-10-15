@@ -2,6 +2,7 @@ body {
     background-color: #000;
     color: #fff;
     font-size: 16px;
+    flex-wrap: wrap;
 }
 section {
     border: 1px solid #fff;
@@ -17,21 +18,17 @@ header, footer {
 
 
 /* christians css */
-body {
-    font-family: Arial;
-  }
   
   * {
     box-sizing: border-box;
   }
   
   form.topnav input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
+    font-size: 20px;
+    border: 1px solid black;
     float: left;
     width: 80%;
-    background: #f1f1f1;
+    background: black;
   }
   
   form.topnav button {
