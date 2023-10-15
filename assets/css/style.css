@@ -67,22 +67,38 @@ header, footer {
 .events-container {
     display: flex;
     gap: 15px;
-
+    flex-wrap: wrap;
 }
 .asteroid-data {
     /* flex: 1; */
     border-radius: 5px;
-    width: 200px;
-    height: 200px;
+    /* width: 200px; */
+    height: auto;
     border: 1px solid #15124a;
     margin: 25px 0;
     padding: 15px;
+    box-shadow: 2px 2px 5px #fff;
     /* background-image: linear-gradient(to right, #15124a , #230148);
     box-shadow: 5px 5px 15px #fff; */
 }
 
 .asteroid-data:hover {
     box-shadow: 5px 5px 10px #fff;
+    transform: scaleY(1.02);
+
 }
 
+.title-filter-container {
+    /* border: 1px solid #ccc; */
+    padding: 10px 20px 0 20px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+#event-date-picker {
+    border: 1px solid #fff;
+    color: #fff;
+}
 /** dee changes /
