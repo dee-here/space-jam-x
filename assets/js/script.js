@@ -3,9 +3,13 @@
 //     var instances = M.Sidenav.init(elems, options);
 //   });
 
-$(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.slider');
+  var instances = M.Slider.init(elems, options);
+});
+
+
+
 
 
   document.addEventListener('DOMContentLoaded', function() {

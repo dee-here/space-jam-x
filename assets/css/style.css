@@ -3,7 +3,10 @@ body {
     /* font-family: ; */
     font-size: 16px;
     font-family: 'Orbitron';
-    background-image: url("./stars_glare_black_204142_3840x2400.jpg");
+background-image: url("./stars_glare_black_204142_3840x2400.jpg");
+/* background-image: url("./Earth_Background.db5a6b2a.mp4"); */ 
+    /* background-image: url("./Earth.gif"); */
+    /* background-image: url("./Cosmo.gif"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
