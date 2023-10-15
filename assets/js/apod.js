@@ -1,11 +1,20 @@
 
    // fetch for pic of the day
-
-var exampleURL = 'https://api.nasa.gov/planetary/apod?api_key=';
-
+var apodDatePickerEl = document.getElementById('apod-date-picker')
 var apiKey ='fPmJ1tNwKaVRT5hG2jPsxrx3q4gF6OSRrzAtx0s8'; 
+var exampleURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+var apodDate;
 
-fetch(exampleURL + apiKey)
+// var apodUrl = `https://api.nasa.gov/planetary/apod?date=${eventsDate}&api_key=${apiKey}`;
+function getApodData(){
+console.log('hello','apodDate');
+
+  if(apodDate) {
+    exampleURL  = `https://api.nasa.gov/planetary/apod?date=${apodDate}&api_key=${apiKey}`;
+   }
+
+  fetch(exampleURL)
+
     .then((response) => {
         if (response.ok) {
           return response.json();
@@ -15,10 +24,10 @@ fetch(exampleURL + apiKey)
       })
       .then(data => {
         console.log(data);
-         displayApod(data)
+         displayApod(data);
       })
       .catch(error => console.log('ERROR'));
-
+}
       
 function displayApod(data){
     // picture of the day image
@@ -43,5 +52,26 @@ function displayApod(data){
        document.getElementById('displayDisc').appendChild(apodDisc)
    // added Discription for picture of the day
 }
-   
-    
+
+function displayDatePicker() {
+  flatpickr("#apod-date-picker", {
+    defaultDate: 'today',
+    maxDate: 'today'
+    // dateFormat: 'Y-M-D',
+  });
+}
+
+// this changes the date of Apod
+function getApodDate() {
+  console.log(" events clicked with: ");
+  console.log("Search space events clicked @@", eventDatePickerEl.value);
+  if(apodDatePickerEl?.value ) {
+    apodDate = apodDatePickerEl.value;
+    //call fetch api 
+    getApodData();
+  }
+}
+
+//  execution fetch
+getApodData(); 
+displayDatePicker();   
