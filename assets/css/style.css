@@ -1,25 +1,53 @@
 body {
-    background-color: #000;
     color: #fff;
+    /* font-family: ; */
     font-size: 16px;
+    font-family: 'Orbitron';
+    background-image: url("./stars_glare_black_204142_3840x2400.jpg");
+    /* background-image: url("./Earth_Background.db5a6b2a.mp4"); */
+    /* background-image: url("./Earth.gif"); */
+    /* background-image: url("./Cosmo.gif"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+
 }
+
+#displayImg{
+
+    /* position: relative; */
+   
+    margin-top: 150px;
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+    
+
+}
+
+
+
 section {
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     padding: 25px;
     margin: 50px 0;
 }
 
-header, footer {
+header,
+footer {
     padding: 25px;
     font-size: 20px;
     text-align: center;
 }
 
 /* Ian changes */
-#apodImg{
-    height: 800px;
+#apodImg {
+    border-radius: 20%;
+    height: 100%;
     width: 100%;
 }
+
 /* Ian changes */
 
 
@@ -28,38 +56,21 @@ header, footer {
 .events-container {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
+
 }
+
 .asteroid-data {
     /* flex: 1; */
     border-radius: 5px;
-    /* width: 200px; */
-    height: auto;
+    width: 200px;
+    height: 200px;
     border: 1px solid #15124a;
     margin: 25px 0;
     padding: 15px;
-    box-shadow: 2px 2px 5px #fff;
     /* background-image: linear-gradient(to right, #15124a , #230148);
     box-shadow: 5px 5px 15px #fff; */
 }
 
 .asteroid-data:hover {
     box-shadow: 5px 5px 10px #fff;
-    transform: scaleY(1.02);
-
 }
-
-.title-filter-container {
-    /* border: 1px solid #ccc; */
-    padding: 10px 20px 0 20px;
-}
-
-.title {
-    font-size: 20px;
-}
-
-#event-date-picker {
-    border: 1px solid #fff;
-    color: #fff;
-}
-/** dee changes /

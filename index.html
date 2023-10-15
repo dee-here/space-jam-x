@@ -3,14 +3,21 @@
 
 <head>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script> -->
 
 
 
@@ -19,19 +26,17 @@
     <title>Space Jam X</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper black">
-            <div class="container" >
+            <div class="container">
                 <a href="#" class="brand-logo 
                 left">SPACE JAM X </a>
 
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                    <i class="left material-icons" class="hide-on-large-only">menu</i>
+                    <!-- <i class="left material-icons" class="hide-on-large-only">menu</i> -->
                 </a>
 
                 <ul class="right hide-on-med-and-down">
@@ -43,7 +48,7 @@
     </nav>
     <section class="space-calendar">
 
-        <input type="text" class="datepicker">
+        <!-- <input type="text" class="datepicker"> -->
 
 
     </section>
@@ -56,34 +61,32 @@
     <!-- <ul class="collapsible collapsible-accordion"> -->
     <!-- <header>Space Jam X</header> -->
     <main class="container">
-     
         <section id="pic-of-day">
+
             <div class="row">
-                <div class="col s8 m8 l9" id="displayImg">
+                <div class="col s2 m5 l8" id="displayImg">
                     <img id="apodImg" img class="responsive-img"></img>
-                  
                 </div>
-                <div id="displayDisc" class="col s4 m4 l3">
+
+                <div id="displayDisc" class="col s4 m4 l4">
                     <h2>IMAGE OF THE DAY</h2>
-                    <h3 id="apodDate"></h3>  
-                    <h3 id="apodTitle"></h3> 
-                    <p id="apodDisc"></p> 
-                    
-                    
+                    <h3 id="apodDate"></h3>
+                    <h3 id="apodTitle"></h3>
+                    <p id="apodDisc"></p>
                 </div>
+
             </div>
         </section>
+
         <section id="space-events">
-            <div class="title-filter-container">
-                <h3 class="title">Near earth Objects</h3>
-                <input type="text" id="event-date-picker" placeholder="Select a Date">
-                <a onclick="getSpaceEvents(event)" class="btn waves-effect waves-dark">Search Near Earth...</a>
-            </div>
-            <div class="events-container card-panel black" id ="events-container">
+            <div class="events-container" class="card-panel">
                 <div class="asteroid-data">Asteroid 1</div>
                 <div class="asteroid-data">Asteroid 2</div>
             </div>
         </section>
+
+
+
         <section id="nasa-search">NASA search</section>
     </main>
     <footer>Footer</footer>
