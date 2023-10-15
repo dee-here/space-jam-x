@@ -3,11 +3,20 @@ body {
     color: #fff;
     font-size: 16px;
     flex-wrap: wrap;
+    /* background-image: url("../images/stars_glare_black_204142_3840x2400.jpg"); */
+    background-image: url("../images/guillaume-le-louarn-uC21aXJ7yQs-unsplash.jpg");
+    /* background-repeat: repeat-y;  */
+    /* background-attachment: fixed; */
+    background-size: contain;
 }
 section {
-    border: 1px solid #fff;
+    /* border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff; */
     padding: 25px;
     margin: 50px 0;
+    background-color: #000000ab;
+    box-shadow: 0px 0px 53px 20px rgba(12,8,64,0.78);
+    border-radius: 15px;
 }
 
 header, footer {
@@ -70,7 +79,7 @@ header, footer {
 /* dee changes **/
 .events-container {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 .asteroid-data {
@@ -80,14 +89,28 @@ header, footer {
     height: auto;
     border: 1px solid #15124a;
     margin: 25px 0;
-    padding: 15px;
-    box-shadow: 2px 2px 5px #fff;
+    padding: 25px;
+    /* box-shadow: 2px 2px 5px #fff; */
     /* background-image: linear-gradient(to right, #15124a , #230148);
     box-shadow: 5px 5px 15px #fff; */
+    /* position: relative; */
+    box-shadow: 0px 0px 53px 20px rgba(12,8,64,0.78);
+}
+
+.asteroid-data i {
+
+  font-size: 220%; /* Adjust the size of the icon */
+  color: #59bbfd; /* Icon color */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  opacity: 0.8;
 }
 
 .asteroid-data:hover {
     box-shadow: 5px 5px 10px #fff;
+    box-shadow: 0px 0px 53px 20px #2111ffc7;
     transform: scaleY(1.02);
 
 }
@@ -102,7 +125,7 @@ header, footer {
 }
 
 #event-date-picker {
-    border: 1px solid #fff;
+    border: 2px solid #15124a;
     color: #fff;
 }
 /** dee changes /
