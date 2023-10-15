@@ -44,11 +44,11 @@
             </div>
     </nav>
 
-    <section class="space-calendar">
+    <!-- <section class="space-calendar">
 
         <input type="text" class="datepicker">
 
-    </section>
+    </section> -->
 
     <!-- <ul id="slide-out" class="mobile-links">
         <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
@@ -82,8 +82,8 @@
         <section id="space-events">
             <div class="title-filter-container">
                 <h3 class="title">Near earth Objects</h3>
-                <input type="text" id="event-date-picker" placeholder="Select a Date">
-                <a onclick="getSpaceEvents(event)" class="btn waves-effect waves-dark">Search Near Earth...</a>
+                <input type="text" id="event-date-picker" placeholder="Select a Date" oninput="getSpaceEvents()">
+                <a onclick="getSpaceEvents()"  class="btn waves-effect waves-dark">Search Near Earth...</a>
             </div>
             <div class="events-container card-panel black" id ="events-container">
                 <div class="asteroid-data">Asteroid 1</div>

@@ -110,7 +110,7 @@ function getAsteroidData(data) {
       // console.log(neoObjectArray[0]?.array);
 
       //picking the 6 next asteroids nearing earth
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; neoObjectArray[0]?.array?.length; i++) {
         if (neoObjectArray[0].array[i]) {
           let itemData = neoObjectArray[0].array[i];
           //var asteroidDataArray = [new asteroid("asteroid-1", "10-20-2013", "33333 MPH", "0.23 M", "0,5 M")];
@@ -142,8 +142,8 @@ function setDateForEventsApi() {
 }
 
 
-function getSpaceEvents(event) {
-  console.log(" events clicked with: ", event);
+function getSpaceEvents() {
+  // console.log(" events clicked with: ", event);
   console.log("Search space events clicked @@", eventDatePickerEl.value);
   if(eventDatePickerEl?.value ) {
     eventsDate = eventDatePickerEl.value;
