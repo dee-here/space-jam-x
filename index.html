@@ -29,12 +29,15 @@
      <nav>
         <div class="nav-wrapper black">
             <div class="container" >
-                <a href="#" class="brand-logo 
-                left">SPACE JAM X </a>
-
+                
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="left material-icons" class="hide-on-large-only">menu</i>
                 </a>
+                <a href="#" class="brand-logo 
+                left">SPACE JAM X </a>
+                
+
+                
 
                 <ul class="right hide-on-med-and-down">
                     <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
@@ -46,7 +49,7 @@
 
     <section class="space-calendar">
 
-        <input type="text" class="datepicker">
+        <input type="text" placeholder="Search..." class="datepicker">
 
     </section>
 
@@ -64,7 +67,8 @@
                 <input type="text" id="apod-date-picker" placeholder="Select a Date">
                 <a onclick="getApodDate()" class="btn waves-effect waves-dark">Search Near Earth...</a>
             </div>
-            <div class="row">
+            <!-- adding an class to identify image and description content -->
+            <div class="row content" > 
                 <div class="col s8 m8 l9" id="displayImg">
                     <img id="apodImg" img class="responsive-img"></img>
                      

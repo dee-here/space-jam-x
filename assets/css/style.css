@@ -5,7 +5,7 @@ body {
     flex-wrap: wrap;
 }
 section {
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     padding: 25px;
     margin: 50px 0;
 }
@@ -16,6 +16,9 @@ header, footer {
     text-align: center;
 }
 
+nav .brand-logo {
+position: relative;
+}
 
 /* christians css */
   
@@ -55,10 +58,16 @@ header, footer {
 /* christians css */
 
 /* Ian changes */
-#apodImg{
-    height: 800px;
-    width: 100%;
-}
+
+/* fork changed here */
+
+/* new value on line 123 onewards */
+
+/* oldvalue */
+/* #apodImg{
+  height: 800px;
+  width: 100%;
+} */
 #apod-date-picker{
     border: 1px solid #fff;
     color: #fff;
@@ -106,3 +115,77 @@ header, footer {
     color: #fff;
 }
 /** dee changes /
+
+
+
+/////////////////////fork////////////////////////////
+
+/* adjusting nav bar */
+.row .col.l3 {
+  width: 400px;
+}
+#displayDisc{
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+#apodImg{
+    margin-top: 20px;
+    height: 600px;
+    width: auto;
+}
+
+nav .container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222;
+   
+   width: 100%;
+  padding: 10px 0;
+}
+.row .col.l9 {
+  width: auto;
+}
+#displaydisc{
+  width: 400px;
+}
+#pic-of-day .content{
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* making site responsive */ 
+
+/* @media screen and (max-width: 768px) { */
+  @media screen and (max-width: 895px) {
+  body {
+    /* background-color: red; */
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #displayImg,#displayDisc{
+    
+    margin-left: 0px;
+    width: 68%;
+
+    
+  }
+  #apodImg{
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+  object-position: center center;
+  }
+  #displayImg{
+
+    display: flex;
+    justify-content: center;
+  }
+
+}
+/* amazing project guys loved it AGENTSJ*/
