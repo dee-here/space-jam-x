@@ -1,10 +1,21 @@
+var searchTextEl = document.getElementById("search-text");
+var searchView;
+
 console.log("Search Output!!");
 
 function getEventsFromSearch() {
   console.log("getEventsFromSearch ");
 
+  
+
 var apiKey = '/search?q={q}';
-var eventRequestUrl = `https://images-api.nasa.gov${apiKey}`;
+var eventRequestUrl = `https://images-api.nasa.gov/search?media_type=image&q=sun`;
+
+if(searchView !== ""){
+    console.log("searchView",searchView);
+    eventRequestUrl = `https://images-api.nasa.gov/search?media_type=image&q=${searchView}`
+
+}
 
 
 fetch(eventRequestUrl)
@@ -14,4 +25,13 @@ fetch(eventRequestUrl)
 
 }
 //christians 
-getEventsFromSearch
+//
+
+function getSearchText() {
+    console.log(searchTextEl,searchView)
+    if(searchTextEl.value) {
+        searchView = searchTextEl.value;
+        getEventsFromSearch();
+    }
+}
+getEventsFromSearch();
