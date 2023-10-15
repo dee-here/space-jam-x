@@ -11,7 +11,9 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
     </script>
+
     
+
 
 
     <meta charset="UTF-8">
@@ -40,13 +42,11 @@
                     <li><a href=#nasa-search>CALENDER IMAGE</a></li>
                 </ul>
             </div>
-    </nav> 
-    
+    </nav>
 
-<section class="space-calendar">
+    <section class="space-calendar">
 
         <input type="text" class="datepicker">
-
 
     </section>
 
@@ -90,7 +90,12 @@
                 <div class="asteroid-data">Asteroid 2</div>
             </div>
         </section>
-        <section id="nasa-search">NASA search</section>
+        <section id="nasa-search">   
+            <form class="topnav" id="search" style="margin: auto;max-width:300px">    
+            <input type="text" id="search-text" placeholder="NASA Space Search">  
+            <button onclick="getSearchText()" type="submit"><i></i></button>
+    </form>
+</section>
      </main>
     <footer class="page-footer black">
         <div class="container">
@@ -118,9 +123,12 @@
       </footer>
           
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+    </main>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/apod.js"></script>
     <script src="./assets/js/event-script.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
 
 </html>
