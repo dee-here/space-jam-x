@@ -63,6 +63,13 @@ function displayAsteroids() {
       let newDiv = document.createElement('div');
       newDiv.classList.add("asteroid-data");
 
+      let newIcon = document.createElement("i");
+      newIcon.classList.add("fa-solid");
+      newIcon.classList.add("fa-meteor");
+      newIcon.classList.add("fa-fade");
+
+      newDiv.appendChild(newIcon);
+
       let newHeadingName = document.createElement('h3');
       newHeadingName.textContent = `Name: ${data.name}`;
       newDiv.appendChild(newHeadingName);
