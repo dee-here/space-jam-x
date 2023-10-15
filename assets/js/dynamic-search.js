@@ -14,10 +14,6 @@ function getEventsFromSearch() {
   if (searchView && searchView !== "") {
     console.log("searchView", searchView);
     var searchRequestUrl = `https://images-api.nasa.gov/search?media_type=image&q=${searchView}`;
-    // fetch(eventRequestUrl)
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.log('Error:', error));
     fetch(searchRequestUrl)
       .then(function (response) {
         if (response.ok) {
@@ -28,16 +24,7 @@ function getEventsFromSearch() {
         }
       })
       .then(function (data) {
-        console.log(
-          "Searched Images data is : ",
-          data,
-          data?.collection?.items
-        );
-        console.log();
         createImagesFromResponse(data?.collection?.items);
-        //call getAsteroid data here !!
-        //   getAsteroidData(data);
-        //   displayAsteroids();
       });
   }
 }
