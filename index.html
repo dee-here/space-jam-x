@@ -91,12 +91,19 @@
                 <div class="asteroid-data"><i class="fa-solid fa-meteor fa-fade"></i></div>
             </div>
         </section>
-        <section id="nasa-search">   
-            <form class="topnav" id="search" style="margin: auto;max-width:300px">    
-            <input type="text" id="search-text" placeholder="NASA Space Search">  
-            <button onclick="getSearchText()" type="submit"><i></i></button>
-    </form>
-</section>
+        <section id="nasa-search" class="duplicate-test">
+            <!-- <form class="" id="search"> -->
+                <input type="text" id="search-text" placeholder="NASA Space Search">
+                <a onclick="getSearchText()" class="btn waves-effect waves-dark" >Search NASA images for ..</a>
+                <br/><br/>
+                <div class="past-search-container" >
+                    Past Searches !
+                </div>
+                <div class="image-results">
+                    <div class="image-grid" id="search-result-container"></div>
+                </div>
+            <!-- </form> -->
+        </section>
      </main>
     <footer class="page-footer black">
         <div class="container">
@@ -123,13 +130,14 @@
         </div>
       </footer>
           
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/apod.js"></script>
     <script src="./assets/js/event-script.js"></script>
     <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/dynamic-search.js"></script>
 </body>
 
 </html>
