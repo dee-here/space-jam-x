@@ -62,21 +62,21 @@
      
         <section id="pic-of-day">
             <div class="row">
-                <input type="text" id="apod-date-picker" placeholder="Select a Date">
-                <a onclick="getApodDate()" class="btn waves-effect waves-dark">Search Near Earth...</a>
+                <h2>IMAGE OF THE DAY</h2>
+                <input type="text" id="apod-date-picker" oninput="getApodDate()" placeholder="Select a Date">
+                <!-- <a onclick="getApodDate()" class="btn waves-effect waves-dark">Search Near Earth...</a> -->
             </div>
             <div class="row">
                 <div class="col s8 m8 l9" id="displayImg">
-                    <img id="apodImg" img class="responsive-img"></img>
+                    <img id="apodImg" class="responsive-img materialboxed"></img>
                      
                 </div>
-                <div id="displayDisc" class="col s4 m4 l3">
-                    <h2>IMAGE OF THE DAY</h2>
+            
+           
+                <div id="displayDisc" class="col s7 m9 l3">
                     <h3 id="apodDate"></h3>  
                     <h3 id="apodTitle"></h3> 
                     <p id="apodDisc"></p> 
-                    
-                    
                 </div>
             </div>
         </section>
@@ -84,7 +84,7 @@
             <div class="title-filter-container">
                 <h3 class="title">Near earth Objects</h3>
                 <input type="text" id="event-date-picker" placeholder="Select a Date" oninput="getSpaceEvents()">
-                <a onclick="getSpaceEvents()"  class="btn waves-effect waves-dark">Search Near Earth...</a>
+                <!-- <a onclick="getSpaceEvents()"  class="btn waves-effect waves-dark">Search Near Earth...</a> -->
             </div>
             <div class="events-container card-panel black" id ="events-container">
                 <div class="asteroid-data">Asteroid 1</div>

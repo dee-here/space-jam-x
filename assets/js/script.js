@@ -1,30 +1,8 @@
 console.log("Group - 9  Space Jam X");
 
-
-
-// //document.addEventListener('DOMContentLoaded', function() {
-// //     var elems = document.querySelectorAll('.sidenav');
-// //     var instances = M.Sidenav.init(elems, options);
-// //   });
-
-// $(document).ready(function () {
-//     $('.datepicker').datepicker();
-// });
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var elems = document.querySelectorAll('.datepicker');
-//     var instances = M.Datepicker.init(elems, options);
-// });
-
-// {/* <script>
-//         $(document).ready(function(){
-// $('.sidenav').sidenav();
-// })
-//     </script>
-// */}
-
-
-
-
-// console.log("Group - 9  Space Jam X");
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, options);
+    instance.open();
+     
+  });
