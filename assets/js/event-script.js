@@ -123,14 +123,8 @@ function getAsteroidData(data) {
           return;
         }
       }
-
-
     }
-
   }
-
-
-
 }
 
 
