@@ -4,7 +4,7 @@ var pastSearchContainerEl = document.getElementById("past-search-container");
 
 var searchView;
 
-//localstorage
+
 var pastSearches;
 
 function getEventsFromSearch() {
@@ -52,6 +52,8 @@ function getSearchText() {
   }
 }
 
+
+//localstorage
 function pastSearchLinkClicked() {
   searchTextEl.value = this?.textContent;
   getSearchText();
