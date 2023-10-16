@@ -9,9 +9,9 @@ class asteroid {
   constructor(name, approachDate, speed, minDiameter, maxDiameter) {
     this.name = name;
     this.approachDate = approachDate;
-    this.speed = parseFloat(speed).toFixed(2);
-    this.minDiameter = minDiameter.toFixed(2);
-    this.maxDiameter = maxDiameter.toFixed(2);
+    this.speed = parseFloat(speed).toFixed(2) + ' mph';
+    this.minDiameter = minDiameter.toFixed(2) + ' miles';
+    this.maxDiameter = maxDiameter.toFixed(2) + ' miles';
   }
 }
 
@@ -24,7 +24,6 @@ class neoApiObject {
 
 
 //store all asteroid data
-// var asteroidDataArray = [new asteroid("asteroid-1", "10-20-2013", "33333 MPH", "0.23 M", "0,5 M")];
 var asteroidDataArray;
 var neoObjectArray;
 var eventsDate;
@@ -40,24 +39,19 @@ function getSpaceEventsFromApi() {
   fetch(eventRequestUrl)
     .then(function (response) {
       if (response.ok) {
-        // console.log("respone is: ", response);
         return response.json();
       } else {
-        console.log("respone is: NOT OK !!", response);
+        console.log("response is: NOT OK !!", response);
       }
     })
     .then(function (data) {
-      // console.log("data is : ", data);
-      //call getAsteroid data here !!
       getAsteroidData(data);
       displayAsteroids();
-
     });
 }
 
 function displayAsteroids() {
   asteroidContainerEl.innerHTML = '';
-  //asteroidDataArray= [...asteroidDataArray, ...asteroidDataArray];
   if(asteroidDataArray.length > 0)  {
     asteroidDataArray.forEach(data => {
       let newDiv = document.createElement('div');
@@ -97,8 +91,6 @@ function displayAsteroids() {
 }
 
 function getAsteroidData(data) {
-  //use data from fetch to load this.
-  //clear stale data
   asteroidDataArray = [];
   var neos = data?.near_earth_objects;
   if(neos) {
@@ -114,9 +106,6 @@ function getAsteroidData(data) {
     neoObjectArray.sort((a,b) => new Date(a.date) - new Date(b.date));
 
     if(neoObjectArray.length > 0 && neoObjectArray[0]) {
-      // console.log(neoObjectArray[0]?.array);
-
-      //picking the 6 next asteroids nearing earth
       for (let i = 0; neoObjectArray[0]?.array?.length; i++) {
         if (neoObjectArray[0].array[i]) {
           let itemData = neoObjectArray[0].array[i];
@@ -134,24 +123,12 @@ function getAsteroidData(data) {
           return;
         }
       }
-
-
     }
-
   }
-
-
-
-}
-
-function setDateForEventsApi() {
-
 }
 
 
 function getSpaceEvents() {
-  // console.log(" events clicked with: ", event);
-  console.log("Search space events clicked @@", eventDatePickerEl.value);
   if(eventDatePickerEl?.value ) {
     eventsDate = eventDatePickerEl.value;
     //call fetch api 
@@ -166,18 +143,10 @@ function displayDatePicker() {
   });
 }
 
-// function initMaterialize() {
-//   M.AutoInit();
-// };
 
 function init() {
-  // initMaterialize()
   getSpaceEventsFromApi();
-  //getAsteroidData();
-  //should be called in getasteroiddata!!
-  //displayAsteroids();
   displayDatePicker()
 }
-
 
 init();
