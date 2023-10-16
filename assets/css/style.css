@@ -8,6 +8,7 @@ body {
     /* background-repeat: repeat-y;  */
     /* background-attachment: fixed; */
     background-size: contain;
+    font-family: 'Gruppo', sans-serif;
 }
 section {
     /* border-top: 1px solid #fff;
@@ -28,7 +29,7 @@ header, footer {
 
 /* christians css */
   
-  * {
+  /* * {
     box-sizing: border-box;
   }
   
@@ -60,7 +61,7 @@ header, footer {
     content: "";
     clear: both;
     display: table;
-  }
+  } */
 /* christians css */
 
 /* Ian changes */
@@ -71,6 +72,9 @@ header, footer {
 #apod-date-picker{
     border: 1px solid #fff;
     color: #fff;
+}
+#displayDisc p {
+  line-height: 1.2;
 }
 /* Ian changes */
 
@@ -159,4 +163,17 @@ header, footer {
   transform: scaleX(1.5);
   transform: scaleY(1.5);
 }
+#past-search-container .btn-flat {
+  color: #ccc;
+}
+.section-title {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  padding: 10px 0 5px 0;
+}
+
 /** dee changes /
