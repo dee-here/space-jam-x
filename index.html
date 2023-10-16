@@ -19,21 +19,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
+
 <body>
-     <nav>
+    <nav>
         <div class="nav-wrapper black">
-            <div class="container" >
-                <a href="#" class="brand-logo 
-                left">SPACE JAM X </a>
+            <div class="container">
+                <a href="#" class="brand-logo left">SPACE JAM X </a>
 
-                <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                    <i class="left material-icons" class="hide-on-large-only">menu</i>
-                </a>
-
-                <ul class="right hide-on-med-and-down">
+                <ul class="right">
                     <li><a href=#pic-of-day>IMAGE OF THE DAY</a></li>
-                    <li><a href=#space-events>SPACE FORECAST</a></li>
-                    <li><a href=#nasa-search>CALENDER IMAGE</a></li>
+                    <li><a href=#space-events>NEAR EARTH OBJECTS</a></li>
+                    <li><a href=#nasa-search>NASA IMAGE SEARCH</a></li>
                 </ul>
             </div>
     </nav>
@@ -49,61 +45,43 @@
                     <img id="apodImg" img class="responsive-img"></img>
                 </div>
                 <div id="displayDisc" class="col s7 m9 l3">
-                    <h3 id="apodDate"></h3>  
-                    <h3 id="apodTitle"></h3> 
-                    <p id="apodDisc"></p> 
+                    <h3 id="apodDate"></h3>
+                    <h3 id="apodTitle"></h3>
+                    <p id="apodDisc"></p>
                 </div>
             </div>
         </section>
         <section id="space-events">
             <div class="title-filter-container">
-                <div class="section-title">Search Alien Objects approaching Earth on a day</div>
+                <div class="section-title">Search Alien Objects approaching Earth for day</div>
                 <input type="text" id="event-date-picker" placeholder="Select a Date" oninput="getSpaceEvents()">
             </div>
-            <div class="events-container card-panel black" id ="events-container">
+            <div class="events-container card-panel black" id="events-container">
                 <div class="asteroid-data">Asteroid 1</div>
                 <div class="asteroid-data"><i class="fa-solid fa-meteor fa-fade"></i></div>
             </div>
         </section>
         <section id="nasa-search">
-                <div class="section-title">Search NASA images library for :</div>
-                <input type="text" id="search-text" placeholder="Search text...">
-                <a onclick="getSearchText()" class="btn waves-effect waves-dark" >Search</a>
-                <br/><br/>
-                <div class="section-subtitle">Past searches</div>
-                <div id="past-search-container"></div>
-                <div class="image-results">
-                    <div class="image-grid" id="search-result-container"></div>
-                </div>
+            <div class="section-title">Search NASA images for</div>
+            <input type="text" id="search-text" placeholder="Search text...">
+            <a onclick="getSearchText()" class="btn waves-effect waves-dark">Search</a>
+            <br /><br />
+            <div class="section-subtitle">Past searches</div>
+            <div id="past-search-container"></div>
+            <div class="image-results">
+                <div class="image-grid" id="search-result-container"></div>
+            </div>
         </section>
-     </main>
-    <footer class="page-footer black">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Portfolio Links:</h5>
-              <ul>
-                <li><a class="green-text" href="https://dee-here.github.io/portfolio/">Deepak Sinha</a></li>
-                <li><a class="red-text" href="https://armand57araujo.github.io/Portfolio/">Armand araujo</a></li>
-                <li><a class="light-blue-text" href="#!">Christian Sanches</a></li>
-                <li><a class="purple-text" href="https://ian-kensington-chadwick-the-3rd.github.io/IanSills-portfolio/">Ian sills</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © 2023 space-jam-x
-         </div>
-        </div>
-      </footer>
-          
     </main>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <footer class="page-footer black">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023 SPACE JAM X
+            </div>
+        </div>
+    </footer>
+
+    </main>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/apod.js"></script>
     <script src="./assets/js/event-script.js"></script>
