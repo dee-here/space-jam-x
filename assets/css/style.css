@@ -1,108 +1,180 @@
 body {
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    flex-wrap: wrap;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  flex-wrap: wrap;
+  background-image: url("../images/guillaume-le-louarn-uC21aXJ7yQs-unsplash.jpg");
+  background-size: contain;
+  font-family: 'Gruppo', sans-serif;
 }
+
 section {
-    border: 1px solid #fff;
-    padding: 25px;
-    margin: 50px 0;
+  padding: 25px;
+  margin: 50px 0;
+  background-color: #000000ab;
+  box-shadow: 0px 0px 53px 20px rgba(12, 8, 64, 0.78);
+  border-radius: 15px;
 }
 
-header, footer {
-    padding: 25px;
-    font-size: 20px;
-    text-align: center;
+header,
+footer {
+  padding: 25px;
+  font-size: 20px;
+  text-align: center;
 }
-
-
-/* christians css */
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  form.topnav input[type=text] {
-    font-size: 20px;
-    border: 1px solid black;
-    float: left;
-    width: 80%;
-    background: black;
-  }
-  
-  form.topnav button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: white;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-  }
-  
-  form.topnav button:hover {
-    background: gray;
-  }
-  
-  form.topnav::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-/* christians css */
 
 /* Ian changes */
-#apodImg{
-    height: 800px;
-    width: 100%;
+#apodImg {
+  /* height: 800px; */
+  width: 100%;
 }
-#apod-date-picker{
-    border: 1px solid #fff;
-    color: #fff;
+
+#apod-date-picker {
+  border: 1px solid #fff;
+  color: #fff;
 }
+
+#displayDisc p {
+  line-height: 1.2;
+}
+
+#apod-date-picker,
+#search-text {
+  border: 2px solid #15124a;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
 /* Ian changes */
 
 
 
 /* dee changes **/
 .events-container {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
 }
+
 .asteroid-data {
-    /* flex: 1; */
-    border-radius: 5px;
-    /* width: 200px; */
-    height: auto;
-    border: 1px solid #15124a;
-    margin: 25px 0;
-    padding: 15px;
-    box-shadow: 2px 2px 5px #fff;
-    /* background-image: linear-gradient(to right, #15124a , #230148);
-    box-shadow: 5px 5px 15px #fff; */
+  border-radius: 5px;
+  height: auto;
+  border: 1px solid #15124a;
+  margin: 25px 0;
+  padding: 25px;
+
+  box-shadow: 0px 0px 53px 20px rgba(12, 8, 64, 0.78);
+}
+
+.asteroid-data i {
+
+  font-size: 220%;
+  /* Adjust the size of the icon */
+  color: #59bbfd;
+  /* Icon color */
+  opacity: 0.8;
 }
 
 .asteroid-data:hover {
-    box-shadow: 5px 5px 10px #fff;
-    transform: scaleY(1.02);
-
+  box-shadow: 0px 0px 53px 20px #2111ffc7;
+  transform: scaleY(1.02);
 }
 
 .title-filter-container {
-    /* border: 1px solid #ccc; */
-    padding: 10px 20px 0 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .title {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #event-date-picker {
-    border: 1px solid #fff;
-    color: #fff;
+  border: 2px solid #15124a;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
 }
+
+.past-search-container {
+  border: 1px soild #2111ffc7;
+  padding: 10px 0;
+}
+
+.image-results {
+  border: 1px soild #2111ffc7;
+  padding: 10px 0;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.image-item {
+  max-width: 200px;
+  max-height: 200px;
+  border: 1px solid #2111ffc7;
+  overflow: hidden;
+  height: auto;
+}
+
+.grid-item img {
+  object-fit: contain;
+  max-width: 200px;
+  max-height: 200px;
+  box-shadow: 0px 0px 10px 10px #070152c7;
+}
+
+.grid-item img:hover {
+  box-shadow: 0px 0px 53px 20px #2111ffc7;
+  transform: scaleX(1.5);
+  transform: scaleY(1.5);
+}
+
+#past-search-container .btn-flat {
+  color: #ccc;
+}
+
+.section-title {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  padding: 10px 0 5px 0;
+}
+
+section.navbar {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  padding: 25px;
+  margin-top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /** dee changes /
