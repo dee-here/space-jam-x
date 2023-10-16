@@ -1,5 +1,3 @@
-console.log("Dynamic search and local storage");
-
 var searchTextEl = document.getElementById("search-text");
 var searchResultGridEl = document.getElementById("search-result-container");
 var pastSearchContainerEl = document.getElementById("past-search-container");
@@ -10,7 +8,6 @@ var searchView;
 var pastSearches;
 
 function getEventsFromSearch() {
-
   if (searchView && searchView !== "") {
     var searchRequestUrl = `https://images-api.nasa.gov/search?media_type=image&q=${searchView}`;
     fetch(searchRequestUrl)
@@ -29,33 +26,30 @@ function getEventsFromSearch() {
 }
 
 function createImagesFromResponse(items) {
+  searchResultGridEl.innerHTML = "";
+  //display first 20 results...
+  if (items && items.length > 20) {
+    for (let i = 0; i < 20; i++) {
+      if (items[i]?.links?.[0]?.href) {
+        let newGridDiv = document.createElement("div");
+        newGridDiv.classList.add("grid-item");
 
-    searchResultGridEl.innerHTML = '';
-    //display first 20 results...
-    if(items && items.length > 20) {
-        for(let i=0; i<20; i++) {
-            if(items[i]?.links?.[0]?.href) {
+        let newImg = document.createElement("img");
+        newImg.src = items[i]?.links?.[0]?.href;
+        newImg.alt = "NASA image";
 
-                let newGridDiv = document.createElement('div');
-                newGridDiv.classList.add("grid-item");
-
-                let newImg = document.createElement('img');
-                newImg.src = items[i]?.links?.[0]?.href;
-                newImg.alt = 'NASA image';
-
-                newGridDiv.appendChild(newImg);
-                searchResultGridEl.appendChild(newGridDiv);
-            }
-        }
+        newGridDiv.appendChild(newImg);
+        searchResultGridEl.appendChild(newGridDiv);
+      }
     }
-
+  }
 }
 
 function getSearchText() {
-    if(searchTextEl.value) {
-        searchView = searchTextEl.value;
-        getEventsFromSearch();
-    }
+  if (searchTextEl.value) {
+    searchView = searchTextEl.value;
+    getEventsFromSearch();
+  }
 }
 
 function pastSearchLinkClicked() {
@@ -64,42 +58,35 @@ function pastSearchLinkClicked() {
 }
 
 function displayPastSearches() {
-  pastSearches = JSON.parse(localStorage.getItem('pastSearches')) || [];
-  pastSearchContainerEl.innerHTML = '';
+  pastSearches = JSON.parse(localStorage.getItem("pastSearches")) || [];
+  pastSearchContainerEl.innerHTML = "";
 
-  pastSearches.forEach( item => {
-    let newButton = document.createElement('button');
+  pastSearches.forEach((item) => {
+    let newButton = document.createElement("button");
     newButton.classList.add("btn");
     newButton.classList.add("btn-flat");
     newButton.textContent = item;
-    newButton.addEventListener('click', pastSearchLinkClicked);
+    newButton.addEventListener("click", pastSearchLinkClicked);
 
     pastSearchContainerEl.appendChild(newButton);
-
   });
-
 }
 
 function saveSearchToLocalStorage(text) {
   text = text?.trim();
-  if(text != undefined && text.trim() !== "") {
-    pastSearches = JSON.parse(localStorage.getItem('pastSearches')) || [];
-    if(!pastSearches.includes(text)) {
+  if (text != undefined && text.trim() !== "") {
+    pastSearches = JSON.parse(localStorage.getItem("pastSearches")) || [];
+    if (!pastSearches.includes(text)) {
       // Only save last 8 searches
-      if(pastSearches.length >= 8) {
+      if (pastSearches.length >= 8) {
         pastSearches.shift();
       }
       pastSearches.push(text);
-      localStorage.setItem('pastSearches', JSON.stringify(pastSearches));
+      localStorage.setItem("pastSearches", JSON.stringify(pastSearches));
     }
     displayPastSearches();
-
   }
-    
-
 }
-
-
 
 function init() {
   displayPastSearches();
