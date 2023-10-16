@@ -43,7 +43,7 @@ function displayApod(data){
     // added title for picture of the day
     // added Date for picture of the day
       var apodDate = document.getElementById('apodDate');
-      apodDate.innerText ='date: ' + apodData.date
+      apodDate.innerText ='Date: ' + apodData.date
       document.getElementById('displayDisc').appendChild(apodDate)
    // added Date for picture of the day
    // added Discription for picture of the day 
